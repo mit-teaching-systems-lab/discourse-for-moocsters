@@ -36,11 +36,10 @@ To do this end-to-end, you'll need access to these accounts and services:
 ## Ongoing maintenance
 - Submit billing to finance
 - Rollbar
-- /logs
 - Discourse upgrades
 
 ## Analysis of course data
-???
+[in other docs, still needs to be added here]
 
 ## Archiving a course
-???
+[in other docs, still needs to be added here]
