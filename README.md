@@ -32,8 +32,9 @@ To do this end-to-end, you'll need access to these accounts and services:
 - Test!
 - Add your course to the MIT-internal [README: Course Forums](https://docs.google.com/document/d/1rcsh2yl8QgTvmZ8-RvIt4ljl21t-oZkfcf7m97uqy1o/edit#heading=h.ugwekbftejfr).
 - Install the two plugins and follow the setup in those repositories, in order:
-- [discourse-edx-lti](https://github.com/mit-teaching-systems-lab/discourse-edx-lti)
-- [discourse-tsl-mods](https://github.com/mit-teaching-systems-lab/discourse-tsl-mods)
+
+  - [discourse-edx-lti](https://github.com/mit-teaching-systems-lab/discourse-edx-lti)
+  - [discourse-tsl-mods](https://github.com/mit-teaching-systems-lab/discourse-tsl-mods)
 
 
 ## Ongoing maintenance
