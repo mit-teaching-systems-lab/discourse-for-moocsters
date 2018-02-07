@@ -1,8 +1,10 @@
 # discourse-for-moocsters
-Instructions for setting up Discourse for a TSL/STEP MOOC course on EdX
+Instructions for setting up Discourse for a TSL/STEP MOOC course on EdX.
+
+**This is still in progress, if you want to do this in the next week or two, email Kevin or come talk in person.**
 
 ## Overview
-Our MOOCs run on EdX or EdX Edge, and use Discourse for discussion forums instead of the built-in EdX forums.  This works by creating a new Discourse instance hosted in Digital Ocean, configuring it with plugins, and then setting up the EdX course to launch the forums through LTI.  This lets learners move into the discussion forums seamlessly, and let's course instructors made modifications in how our discussion forums work that can be replicated across all our courses.  One example is letting learners create their own discussion "groups" based on their interests.
+Our MOOCs run on EdX or EdX Edge, and use Discourse for discussion forums instead of the built-in EdX forums.  This works by creating a new Discourse instance hosted in Digital Ocean, configuring it with plugins, and then setting up the EdX course to launch the forums through LTI.  This lets learners move into the discussion forums seamlessly, and let's course instructors make modifications in how our discussion forums work that can be replicated across all our courses.  One example is letting learners create their own discussion "groups" based on their interests.
 
 This repository describes how to set up a Discourse for a new TSL/STEP MOOC course on EdX.  There are two other related repositories:
 
@@ -12,11 +14,12 @@ This repository describes how to set up a Discourse for a new TSL/STEP MOOC cour
 ## How do I do this?
 This requires some knowledge of ops/sysadmin engineering tasks.  There's actively maintained documentation for much of this setup process, so this should be fairly accessible.  Note that this is a different kind of engineering work than programming or coding.
 
-It will require these accounts and services:
+To do this end-to-end, you'll need access to these accounts and services:
 
 - Cloud provider (eg, Digital Ocean)
 - Email provider (eg, Mailgun)
 - DNS provider (eg, AWS Route 53)
+- Key-value storage provider (eg, AWS S3)
 
 ## Setup
 #### Initial setup for new course forums
