@@ -30,11 +30,12 @@ To do this end-to-end, you'll need access to these accounts and services:
 - Wait to setup additional [features](https://github.com/discourse/discourse/blob/master/docs/INSTALL-cloud.md#add-more-discourse-features) until after the plugin and EdX setup is done.
 - When the site is up, set it as "private" login and don't invite any users yet
 - Test!
-- Add your course to the MIT-internal [README: Course Forums](https://docs.google.com/document/d/1rcsh2yl8QgTvmZ8-RvIt4ljl21t-oZkfcf7m97uqy1o/edit#heading=h.ugwekbftejfr).
 - Install the two plugins and follow the setup in those repositories, in order:
 
   1. [discourse-edx-lti](https://github.com/mit-teaching-systems-lab/discourse-edx-lti)
   2. [discourse-tsl-mods](https://github.com/mit-teaching-systems-lab/discourse-tsl-mods)
+- Test!
+- Add your course to the MIT-internal [README: Course Forums](https://docs.google.com/document/d/1rcsh2yl8QgTvmZ8-RvIt4ljl21t-oZkfcf7m97uqy1o/edit#heading=h.ugwekbftejfr).
 
 
 ## Ongoing maintenance
