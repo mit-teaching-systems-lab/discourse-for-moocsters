@@ -25,15 +25,24 @@ To do this end-to-end, you'll need access to these accounts and services:
 #### Initial setup for new course forums
 - Setup [MailGun](https://www.mailgun.com/) or another email provider.
 - Add DNS records for email and for your new Discourse instance (see [Discourse docs](https://github.com/discourse/discourse/blob/master/docs/INSTALL-cloud.md#email)).  We've typically used AWS Route 53 for this and domain names like `graduate-of-the-future-discourse.teachingsystemslab.org`.
-- Follow [Install Discourse in under 30 minutes](https://github.com/discourse/discourse/blob/master/docs/INSTALL-cloud.md).  We've typically run standard droplets with 2GB RAM / 1v CPU / 50GB disk.  Add backups and monitoring as options, and use separate SSH keys for each instance.
-- If you didn't setup SSL during the initial installation, follow the Discourse instructions to setup SSL with Let's Encrypt ([instructions](https://meta.discourse.org/t/setting-up-lets-encrypt/40709))
-- Wait to setup additional [features](https://github.com/discourse/discourse/blob/master/docs/INSTALL-cloud.md#add-more-discourse-features) until after the plugin and EdX setup is done.
-- When the site is up, set it as "private" login and don't invite any users yet
-- Test!
-- Install the two plugins and follow the setup in those repositories, in order:
+- Follow [Install Discourse in under 30 minutes](https://github.com/discourse/discourse/blob/master/docs/INSTALL-cloud.md).
+
+  * We've typically run standard droplets with 2GB RAM / 1v CPU / 50GB disk.  Add backups and monitoring as options, and use separate SSH keys for each instance.
+  * If you didn't setup SSL during the initial installation, follow the Discourse instructions to setup SSL with Let's Encrypt ([instructions](https://meta.discourse.org/t/setting-up-lets-encrypt/40709))
+  * When the site is up and you go through the setup process, set it as "private" login.  Set the "Homepage" to be `Categories` and then be prepared to make the most important decision: what emoji style to use.  Skip inviting any users yet - we'll do that through EdX and LTI.
+  * Wait to setup additional [features](https://github.com/discourse/discourse/blob/master/docs/INSTALL-cloud.md#add-more-discourse-features) until after the plugin and EdX setup is done.
+  
+- Test!  At this point, you should be able to sign in with your admin user and see a Discourse forum.
+- Install the two plugins, following the steps in those repositories (or check out the [Install a Plugin](https://meta.discourse.org/t/install-a-plugin/19157/1) Discourse docs for more help):
 
   1. [discourse-edx-lti](https://github.com/mit-teaching-systems-lab/discourse-edx-lti)
   2. [discourse-tsl-mods](https://github.com/mit-teaching-systems-lab/discourse-tsl-mods)
+- Test!
+- Install additional [features](https://github.com/discourse/discourse/blob/master/docs/INSTALL-cloud.md#add-more-discourse-features):
+
+  1. 
+  2. 
+
 - Test!
 - Add your course to the MIT-internal [README: Course Forums](https://docs.google.com/document/d/1rcsh2yl8QgTvmZ8-RvIt4ljl21t-oZkfcf7m97uqy1o/edit#heading=h.ugwekbftejfr).
 
