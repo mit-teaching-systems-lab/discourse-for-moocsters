@@ -41,16 +41,15 @@ To do this end-to-end, you'll need access to these accounts and services:
 - Test!
 - Install additional [features](https://github.com/discourse/discourse/blob/master/docs/INSTALL-cloud.md#add-more-discourse-features) or read up on other [admin configuration](https://github.com/discourse/discourse/blob/master/docs/ADMIN-QUICK-START-GUIDE.md).
 
-  1. Automatic backups: https://meta.discourse.org/t/configure-automatic-backups-for-discourse/14855
-  2. CDN: https://meta.discourse.org/t/enable-a-cdn-for-your-discourse/14857
-  3. Reply via email: https://meta.discourse.org/t/set-up-reply-via-email-support-e-mail/14003
-  4. Text customizations
-  5. Back to EdX button
-  6. Rollbar
+  1. Automatic backups to S3: https://meta.discourse.org/t/configure-automatic-backups-for-discourse/14855
+  2. Create a new Rollbar project to report any JS errors.  Add the Rollbar JS snippet in `Admin` > `Customize` > `Themes` and make a new theme with that JS in the `</head>` section.
 
 - Test!
 - Add your course to the MIT-internal [README: Course Forums](https://docs.google.com/document/d/1rcsh2yl8QgTvmZ8-RvIt4ljl21t-oZkfcf7m97uqy1o/edit#heading=h.ugwekbftejfr).
 - [Configure](https://github.com/discourse/discourse/blob/master/docs/ADMIN-QUICK-START-GUIDE.md) whatever else you like or add some more [plugins](https://meta.discourse.org/c/plugin) or [features](https://github.com/discourse/discourse/blob/master/docs/INSTALL-cloud.md#add-more-discourse-features)!
+
+  1. Customize text
+  2. Change colors
 
 
 ## Ongoing maintenance
