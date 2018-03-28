@@ -58,7 +58,73 @@ To do this end-to-end, you'll need access to these accounts and services:
 - Discourse upgrades
 
 ## Analysis of course data
+If you'd like to get course data for analysis, you can do this!  You'll need have someone give you access credentials and then run some commands using these tools, described more fully below:
+
+1. SSH and SSH keys
+2. Docker
+3. Rails console
+
+### Gaining access to production data
+#### 1. SSH and SSH keys
+Course instances of Discourse are typically hosted on Digital Ocean and you can use `ssh` to connect to the instance.
+
+You'll need help from someone who has access to the lab's Digital Ocean account, but it will only take a few minutes and you don't need to be in the same room.  This article will walk you through it: [How To Use SSH Keys with DigitalOcean Droplets](https://www.digitalocean.com/community/tutorials/how-to-use-ssh-keys-with-digitalocean-droplets).
+
+⚠️ If you are sharing SSH keys, never share the private key anywhere.  If you do, you are giving full access to all course data and the ability to destroy everything. ⚠️
+
+If you connect with ssh succesfully, you should see a command prompt like this:
+
+```
+graduateofthefuture-discourse:~#
+```
+
+#### 2. Docker
+We use the simplest Discourse setup, where Discourse runs inside of a Docker container.  So once you're connected over `ssh`, you need to enter into the Docker container.
+
+Run these commands to enter the container:
+```
+graduateofthefuture-discourse:~# cd /var/discourse/
+graduateofthefuture-discourse:/var/discourse# ./launcher enter app
+graduateofthefuture-discourse-app:/var/www/discourse#
+```
+
+Now you're inside the container!
+
+#### 3. Rails console
+Once there, you can use tools for interacting with the Discourse app.  Discourse is a Ruby on Rails app, so the most useful tool is `rails console`, which lets you run code to interact with the Discourse app or the database it's connected to.
+
+From here, you can run any Rails code that you like to query the database for the forums however you like.
+
+⚠️ You can also delete all the data or do destructive things in the process, so be mindful of what kinds of queries you run, especially if they write, create or update any data. ⚠️
+
+Once you're in the Docker container, run these commands to start a Rails console:
+
+```
+graduateofthefuture-discourse-app:/var/www/discourse# rails console
+[1] pry(main)>
+``` 
+
+Now you're inside a Rails console and run commands to interact with the production Discourse instance, or to query from other related services like the database.
+
+### Queries to get particular kinds of data
 #### Grab a CSV of all data for a category
+This prints a CSV of all data for a particular category.  To use it, you pass the "slug" of the category.  You can find the "slug" for a category by looking in the URL for the page you want data for.
+
+For example, with the URL:
+```
+https://graduate-of-the-future-discourse.teachingsystemslab.org/c/part-2-focusing-on-the-graduate-profile-process/activity-i-used-to-think-but-now-i-think
+```
+
+The slug is the last part, `'activity-i-used-to-think-but-now-i-think'`.  So to run the script on that category below, you'd paste this whole script below into the console, and then run:
+
+```
+[1] pry(main)> print_csv('activity-i-used-to-think-but-now-i-think')
+```
+
+Then you should see a CVS!  The simplest way to get it to your computer is to copy it and paste it somewhere else.
+
+ℹ️ When you're all done, run `exit` to leave the Rails console, `exit` to leave the Docker container, and then `exit` to leave the SSH session.
+
 ```ruby
 require 'csv'
 
