@@ -1,8 +1,6 @@
 # discourse-for-moocsters
 Instructions for setting up Discourse for a TSL/STEP MOOC course on EdX.
 
-**This is still in progress, if you want to do this in the next week or two, email Kevin or come talk in person.**
-
 ## Overview
 Our MOOCs run on EdX or EdX Edge, and use Discourse for discussion forums instead of the built-in EdX forums.  This works by creating a new Discourse instance hosted in Digital Ocean, configuring it with plugins, and then setting up the EdX course to launch the forums through LTI.  This lets learners move into the discussion forums seamlessly, and let's course instructors make modifications in how our discussion forums work that can be replicated across all our courses.  One example is letting learners create their own discussion "groups" based on their interests.
 
